@@ -35,6 +35,7 @@ final class PlaceDetailViewController: UIViewController {
         
         let button = UIButton(configuration: UIButton.Configuration.bordered())
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapDirectionButton), for: .touchUpInside)
         button.setTitle("Directions", for: .normal)
         return button
     }()
@@ -43,6 +44,7 @@ final class PlaceDetailViewController: UIViewController {
         
         let button = UIButton(configuration: UIButton.Configuration.bordered())
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapCallButton), for: .touchUpInside)
         button.setTitle("Call", for: .normal)
         return button
     }()
@@ -95,6 +97,19 @@ final class PlaceDetailViewController: UIViewController {
         
     }
     
+    @objc private func didTapCallButton(_ sender: UIButton) {
+     
+        let phone = place.phone.formatForPhoneCall
+        guard let url = URL(string: "tel://\(phone)") else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    @objc private func didTapDirectionButton(_ sender: UIButton) {
+        let cordinate = place.location.coordinate
+        guard let url = URL(string: "http://maps.apple.com/?daddr=\(cordinate.latitude),\(cordinate.longitude)") else { return }
+        
+        UIApplication.shared.open(url)
+    }
     
     
 }
