@@ -99,11 +99,6 @@ class ViewController: UIViewController{
         case .authorizedAlways, .authorizedWhenInUse:
             let region = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
             mapView.setRegion(region, animated: true)
-        case .denied:
-//            print("")
-            showAlert()
-        case .notDetermined, .restricted:
-            print("")
         default:
             print("")
         }
@@ -114,6 +109,12 @@ class ViewController: UIViewController{
         //remove all annotations
         mapView.removeAnnotations(mapView.annotations)
         
+        if let locationManagerStatus = locationManager?.authorizationStatus,
+           locationManagerStatus == .denied {
+            showAlert()
+            return
+        }
+              
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = query
         request.region = mapView.region
@@ -122,7 +123,6 @@ class ViewController: UIViewController{
         search.start { [weak self] response, error in
             
             guard let response, error == nil else { return }
-            print(response)
             self?.places = response.mapItems.map(PlaceAnnotation.init)
             self?.places.forEach { place in
                 self?.mapView.addAnnotation(place)

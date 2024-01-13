@@ -3,4 +3,54 @@
    uuid = "AC4B69A9-5883-4B83-A3F8-BE43EBD4CCA6"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A378BF54-98D2-4876-96ED-E45308F4B519"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NearMe/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "findNearByPlaces(by:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A378BF54-98D2-4876-96ED-E45308F4B519 - 57982f9ed485265b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NearMe.ViewController.findNearByPlaces(by: Swift.String) -&gt; ()"
+                  moduleName = "NearMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitrouniyar/Documents/Projects/NearMe/NearMe/NearMe/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "1040">
+               </Location>
+               <Location
+                  uuid = "A378BF54-98D2-4876-96ED-E45308F4B519 - 57982f9ed485265b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NearMe.ViewController.findNearByPlaces(by: Swift.String) -&gt; ()"
+                  moduleName = "NearMe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitrouniyar/Documents/Projects/NearMe/NearMe/NearMe/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "528">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
